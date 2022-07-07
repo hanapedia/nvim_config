@@ -66,7 +66,7 @@ nvim_tree.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {
@@ -107,7 +107,7 @@ nvim_tree.setup {
           renamed = "➜",
           deleted = "",
           untracked = "U",
-          ignored = "◌",
+          ignored = "I",
         },
         folder = {
           default = "",
