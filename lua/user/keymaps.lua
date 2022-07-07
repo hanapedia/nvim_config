@@ -87,4 +87,5 @@ keymap("n", "<leader>f",
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":NvimTreeFocus | :NvimTreeRefresh <cr>", opts)
+keymap("n", "<leader>E", ":NvimTreeToggle <cr>", opts)

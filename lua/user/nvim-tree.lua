@@ -46,6 +46,7 @@ nvim_tree.setup {
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
+  sort_by = "extension",
   -- update_to_buf_dir = {
   --   enable = true,
   --   auto_open = true,
