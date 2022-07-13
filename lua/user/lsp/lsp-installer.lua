@@ -37,7 +37,7 @@ lsp_installer.on_server_ready(function(server)
   end
 
   if server.name == "ansiblels" then
-    local ansiblels_opts = require("user.lsp.settings.yamlls")
+    local ansiblels_opts = require("user.lsp.settings.ansiblels")
     opts = vim.tbl_deep_extend("force", ansiblels_opts, opts)
   end
   -- -- This setup() function is exactly the same as lspconfig's setup function.

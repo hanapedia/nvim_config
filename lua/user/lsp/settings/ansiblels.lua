@@ -1,9 +1,10 @@
-local opts = {
+return {
   settings = {
-    completion = {
-      provideRedirectModules = false,
-      provideModuleOptionAliases = false
+    ansible = {
+      completion = {
+        provideRedirectModules = false,
+        provideModuleOptionAliases = false
+      }
     }
   }
 }
-return opts
