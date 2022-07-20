@@ -99,7 +99,10 @@ return packer.startup(function(use)
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
   })
+
+  -- Notetaking and Markdown
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use "mickael-menu/zk-nvim" -- nvim plugin for zk
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

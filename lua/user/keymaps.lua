@@ -1,6 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -68,13 +67,14 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "jk", "<ESC>", opts)
+keymap("x", "<leader>jk", "<ESC>", opts)
 
 -- Terminal --
 -- Keymaps for custom terminals
 keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>H", "_<cmd>lua _HTOP_TOGGLE()<CR>", opts)
 -- Better terminal navigation
+local term_opts = { silent = true }
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
@@ -91,3 +91,16 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeFocus <cr>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh <cr>", opts)
 keymap("n", "<leader>E", ":NvimTreeToggle <cr>", opts)
+
+-- zk
+local zk_opts = { noremap = true, silent = false }
+-- Open notes.
+keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", zk_opts)
+-- Open notes associated with the selected tags.
+keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", zk_opts)
+
+-- Search for the notes matching a given query.
+keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>"
+  , zk_opts)
+-- Search for the notes matching the current visual selection.
+keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", zk_opts)
