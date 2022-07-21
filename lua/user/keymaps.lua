@@ -92,6 +92,9 @@ keymap("n", "<leader>e", ":NvimTreeFocus <cr>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh <cr>", opts)
 keymap("n", "<leader>E", ":NvimTreeToggle <cr>", opts)
 
+-- MarkdownPreview
+keymap("n", "<leader>md", ":MarkdownPreview<cr>", opts)
+
 -- zk
 local zk_opts = { noremap = true, silent = false }
 -- Open notes.

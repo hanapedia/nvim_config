@@ -48,9 +48,8 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons" -- icons used by many plugins
-  use "kyazdani42/nvim-tree.lua" -- nvim tree
-  use "akinsho/bufferline.nvim" -- bufferline
   use "moll/vim-bbye" -- plugin for closing all the buffers
+  use "ggandor/leap.nvim" -- better navigation, like sneak
 
   -- colorschemes
   use "shaunsingh/nord.nvim" -- nord colorscheme with treesitter support
@@ -89,8 +88,10 @@ return packer.startup(function(use)
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
 
-  -- Lualine
-  use "nvim-lualine/lualine.nvim"
+  -- UIs 
+  use "nvim-lualine/lualine.nvim" -- lualine
+  use "kyazdani42/nvim-tree.lua" -- nvim tree
+  use "akinsho/bufferline.nvim" -- bufferline
 
   -- Toggleterm
   use "akinsho/toggleterm.nvim"
