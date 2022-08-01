@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- icons used by many plugins
   use "moll/vim-bbye" -- plugin for closing all the buffers
   use "ggandor/leap.nvim" -- better navigation, like sneak
+  -- use "glepnir/dashboard-nvim" -- dashboard
 
   -- colorschemes
   use "shaunsingh/nord.nvim" -- nord colorscheme with treesitter support
