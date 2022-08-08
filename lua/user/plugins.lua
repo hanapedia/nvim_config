@@ -56,6 +56,7 @@ return packer.startup(function(use)
   use "shaunsingh/nord.nvim" -- nord colorscheme with treesitter support
   use "EdenEast/nightfox.nvim" -- nordfox colorscheme and some more
   use "rmehri01/onenord.nvim" -- onenord colorscheme
+  use "hanapedia/mynord.nvim" -- fork of onenord
 
   -- Completions
   use "hrsh7th/nvim-cmp" -- The completion plugin
