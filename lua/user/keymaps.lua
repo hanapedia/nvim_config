@@ -37,7 +37,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Write, Quit, Closes
-keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>w", ":w!<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>c", ":Bdelete<CR>", opts)
 
