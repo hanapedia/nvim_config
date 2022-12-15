@@ -16,4 +16,5 @@ require "user.toggleterm"
 -- require "user.filetype"
 require "user.mdpreview"
 require "user.zk"
-require "user.leap"
+require "user.hop"
+--[[ require "user.leap" ]]

@@ -49,8 +49,14 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons" -- icons used by many plugins
   use "moll/vim-bbye" -- plugin for closing all the buffers
-  use "ggandor/leap.nvim" -- better navigation, like sneak
+  --[[ use "ggandor/leap.nvim" -- better navigation, like sneak ]]
   -- use "glepnir/dashboard-nvim" -- dashboard
+
+  -- hop
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+  }
 
   -- colorschemes
   use "shaunsingh/nord.nvim" -- nord colorscheme with treesitter support
