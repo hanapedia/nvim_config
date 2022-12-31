@@ -41,3 +41,4 @@ vim.keymap.set({'n', 'v'}, 'sl', function()
   hop.hint_lines()
 end, {remap=true})
 
+
