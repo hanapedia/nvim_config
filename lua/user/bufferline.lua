@@ -16,7 +16,7 @@ bufferline.setup {
     --[[ indicator_icon = "▎", ]]
     indicator = {
       style = 'icon',
-      icon = "▎",
+      icon = "",
     },
     buffer_close_icon = "",
     -- buffer_close_icon = '',
@@ -68,7 +68,7 @@ bufferline.setup {
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
     separator_style = "thick", -- | "thick" | "thin" | { 'any', 'any' },
-    enforce_regular_tabs = true,
+    enforce_regular_tabs = false,
     always_show_bufferline = true,
     -- sort_by = 'relative_directory',
     -- 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)

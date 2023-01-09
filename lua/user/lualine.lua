@@ -65,9 +65,9 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "onenord",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		theme = "mynord",
+		component_separators = { left = "", right = "|" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
 	},
@@ -76,8 +76,8 @@ lualine.setup({
 		lualine_b = { branch, diagnostics },
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", "require'lsp-status'.status()", filetype },
-		lualine_y = { location },
+		lualine_x = { diff, "require'lsp-status'.status()" },
+		lualine_y = { "encoding", filetype, location },
 		lualine_z = { progress },
 	},
 	inactive_sections = {
