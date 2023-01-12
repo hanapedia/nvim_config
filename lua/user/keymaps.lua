@@ -98,15 +98,15 @@ keymap("n", "<leader>E", ":NvimTreeToggle <cr>", opts)
 -- MarkdownPreview
 keymap("n", "<leader>md", ":MarkdownPreview<cr>", opts)
 
--- zk
-local zk_opts = { noremap = true, silent = false }
--- Open notes.
-keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", zk_opts)
--- Open notes associated with the selected tags.
-keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", zk_opts)
-
--- Search for the notes matching a given query.
-keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>"
-  , zk_opts)
--- Search for the notes matching the current visual selection.
-keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", zk_opts)
+--[[ -- zk ]]
+--[[ local zk_opts = { noremap = true, silent = false } ]]
+--[[ -- Open notes. ]]
+--[[ keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", zk_opts) ]]
+--[[ -- Open notes associated with the selected tags. ]]
+--[[ keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", zk_opts) ]]
+--[[]]
+--[[ -- Search for the notes matching a given query. ]]
+--[[ keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>" ]]
+--[[   , zk_opts) ]]
+--[[ -- Search for the notes matching the current visual selection. ]]
+--[[ keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", zk_opts) ]]
