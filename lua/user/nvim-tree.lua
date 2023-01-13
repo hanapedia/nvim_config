@@ -122,11 +122,11 @@ nvim_tree.setup {
     timeout = 500,
   },
   view = {
-    -- width = 30,
+    width = 50,
     -- height = 30,
-    adaptive_size = true,
-    hide_root_folder = true,
-    side = "left",
+    adaptive_size = false,
+    hide_root_folder = false,
+    side = "right",
     -- auto_resize = true,
     mappings = {
       custom_only = true,
@@ -140,7 +140,7 @@ nvim_tree.setup {
       open_win_config = {
         relative = "editor",
         border = "rounded",
-        width = 30,
+        width = 50,
         height = 30,
         row = 1,
         col = 1,
