@@ -1,8 +1,7 @@
 local opts = { noremap = true, silent = true }
 
-
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -71,8 +70,9 @@ keymap("x", "<leader>jk", "<ESC>", opts)
 
 -- Terminal --
 -- Keymaps for custom terminals
-keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
-keymap("n", "<leader>H", "_<cmd>lua _HTOP_TOGGLE()<CR>", opts)
+--[[ keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) ]]
+--[[ keymap("n", "<leader>H", "_<cmd>lua _HTOP_TOGGLE()<CR>", opts) ]]
+--
 -- Better terminal navigation
 local term_opts = { silent = true }
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -80,20 +80,12 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Open link in browser --
-keymap("n", "gx", [[:silent execute '!open' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
-
 -- Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f",
   "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
   opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeFocus <cr>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh <cr>", opts)
-keymap("n", "<leader>E", ":NvimTreeToggle <cr>", opts)
 
 -- MarkdownPreview
 keymap("n", "<leader>md", ":MarkdownPreview<cr>", opts)

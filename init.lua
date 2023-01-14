@@ -9,13 +9,18 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.nvim-tree"
-require "user.bufferline"
-require "user.lualine"
+require "user.hop"
+
 require "user.toggleterm"
 require "user.mdpreview"
-require "user.hop"
 require "user.trouble"
+require "user.lualine"
+require "user.bufferline"
+
+if vim.g.IDE then
+  require "user.nvim-tree"
+  require "user.ide-keymaps"
+end
 -- require "user.filetype"
 -- require "user.zk"
 --[[ require "user.leap" ]]
