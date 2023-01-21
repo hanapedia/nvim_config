@@ -11,16 +11,18 @@ require "user.comment"
 require "user.gitsigns"
 require "user.hop"
 
-require "user.toggleterm"
 require "user.mdpreview"
 require "user.trouble"
 require "user.lualine"
 require "user.bufferline"
 
 if vim.g.IDE then
+  print("Opened in IDE mode")
   require "user.nvim-tree"
   require "user.ide-keymaps"
 end
+
+-- require "user.toggleterm"
 -- require "user.filetype"
 -- require "user.zk"
 --[[ require "user.leap" ]]

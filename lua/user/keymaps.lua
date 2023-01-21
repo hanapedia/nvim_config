@@ -68,18 +68,6 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<leader>jk", "<ESC>", opts)
 
--- Terminal --
--- Keymaps for custom terminals
---[[ keymap("n", "<leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts) ]]
---[[ keymap("n", "<leader>H", "_<cmd>lua _HTOP_TOGGLE()<CR>", opts) ]]
---
--- Better terminal navigation
-local term_opts = { silent = true }
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 -- Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f",
